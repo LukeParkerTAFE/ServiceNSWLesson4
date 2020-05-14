@@ -68,12 +68,12 @@ let person4 = {
 
 // 3 Create a function that takes 3 parameters. The first should be an object with two properties name and age. The second should be a number, the third should be a string. The function should return true if the age of the object is equal to the second parameter AND the name is not equal to the third parameter. Otherwise return false
 
-function checkExactNameAndAge(person, age, name) {
+function checkExactNameAndAge(person, ageToBe, nameToNotBe) {
     // if the age of the person is equal to the second parameter
-    let equalAge = age == person.age;
+    let equalAge = ageToBe == person.age;
 
     // if the name of the person is NOT equal to the thrid parameter
-    let notEqualName = name != person.name;
+    let notEqualName = nameToNotBe != person.name;
 
     if(equalAge && notEqualName) {
         return true;
