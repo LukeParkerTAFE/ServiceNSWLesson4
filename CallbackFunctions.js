@@ -1,13 +1,13 @@
 let people = [
     {
-      name: "Luke",
-      message: "Hi"
+        name: "Luke",
+        message: "Hi"
     },
     {
-      name: "Dan",
-      message: "I'm Dan!"
+        name: "Dan",
+        message: "I'm Dan!"
     }
-  ];
+];
 
 function myGreeter(people, callback) {
     for (let i = 0; i < people.length; i++) {
@@ -33,4 +33,20 @@ function anotherCallbackFunction(message) {
     }
 }
 
-myGreeter(people, anotherCallbackFunction);
+myGreeter(people, myCallbackFunction);
+
+// Array.filter
+function myFilterFunction(person) {
+    if (person.name == "Luke") {
+        return true; // will be included in filtered array
+    } else {
+        return false; // will be excluded from filtered array
+    }
+}
+
+let filteredArray = people.filter(myFilterFunction);
+
+console.log("people");
+console.log(people);
+console.log("filteredArray");
+console.log(filteredArray);
